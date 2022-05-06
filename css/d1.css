@@ -16,12 +16,12 @@ p {color: aliceblue;}
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100vh; */
+    height: 100vh;
 }
 .head{
-    /* padding-top: 30%;
-    padding-left: 8%; */
-    padding: 55vh 5vh 27vh 10vh;
+    padding-top: 30%;
+    padding-left: 8%;
+    /* padding: 55vh 5vh 27vh 10vh; */
 }
 table td{
     padding: 10px;
@@ -58,7 +58,7 @@ p.fushuhang{
     padding: 10vh;
 }
 p.xiangqing{
-    padding-left: 70%;
+    padding-right: 0;
 }
 .ending{
     background-image: url(../picture/p1.png);
