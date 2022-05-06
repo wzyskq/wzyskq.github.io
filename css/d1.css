@@ -16,11 +16,12 @@ p {color: aliceblue;}
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .head{
-    padding-top: 30%;
-    padding-left: 8%;
+    /* padding-top: 30%;
+    padding-left: 8%; */
+    padding: 55vh 5vh 27vh 10vh;
 }
 table td{
     padding: 10px;
@@ -37,26 +38,24 @@ p.fushuhang{
 .zs{
     color: rgb(193, 193, 193);
 }
-.bg1{
-    height: 100vh;
+.bg{
     text-align: center;
     background: linear-gradient(200deg,#b1f4cf,#9890e3);
+    background-attachment: fixed;
 }
-.bg2{
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(-200deg,#9890e3,#b1f4cf);
-}
+
 .about{
-    text-align: center;
-    padding: 5em;
-    /* margin: 5em 0; */
+    height: 100%;
+    padding: 10vh 0 35vh;
     line-height: 2em;
 }
+.sth{
+    height: 100%;
+    padding: 10vh 0 45vh;
+}
 .history{
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(200deg,#b1f4cf,#9890e3);
+    height: 100%;
+    padding: 10vh;
 }
 p.xiangqing{
     padding-left: 70%;
@@ -72,7 +71,7 @@ p.xiangqing{
     justify-content: center;
     align-items: center;
 }
-/* table caption{
+table caption{
     padding: 10px;
     font-size: 1.5em;
 }
@@ -86,4 +85,4 @@ table th{
 }
 table td a{
     color:aliceblue;
-} */
+}
