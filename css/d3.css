@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height:200vh;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    background-image: linear-gradient(-30deg, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    user-select: none;
+}
+.title{
+    color: #cd566a;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15vh;
+}
