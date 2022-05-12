@@ -26,3 +26,9 @@ table td{
 table td a{
     color: #000;
 }
+.borderr{
+    /* border-bottom: 3px solid aliceblue; */
+    background-color: rgba(246, 246, 246, 0.375);
+    border-radius: 10px;
+    padding: 3px;
+}
