@@ -12,7 +12,8 @@ a{
 h2{color: aliceblue;}
 p {color: aliceblue;}
 .header{
-    background-image: url(../picture/p1.png);
+    /* background-image: url(../picture/p1.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +62,8 @@ p.xiangqing{
     padding-right: 0;
 }
 .ending{
-    background-image: url(../picture/p1.png);
+    /* background-image: url(../picture/p1.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

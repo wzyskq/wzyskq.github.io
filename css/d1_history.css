@@ -38,16 +38,20 @@
 }
 /* 分别设置图片 */
 .card:nth-child(1)::before{
-    background-image: url(../picture/p6.png);
+    /* background-image: url(../picture/p6.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805cdface03.png);
 }
 .card:nth-child(2)::before{
-    background-image: url(../picture/p7.png);
+    /* background-image: url(../picture/p7.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805cfb9fb3b.png);
 }
 .card:nth-child(3)::before{
-    background-image: url(../picture/p8.png);
+    /* background-image: url(../picture/p8.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805cfe47fd4.png);
 }
 .card:nth-child(4)::before{
-    background-image: url(../picture/p9.png);
+    /* background-image: url(../picture/p9.png); */
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ce1d7d7b.png);
 }
 /* 遮罩 */
 .card::after{
