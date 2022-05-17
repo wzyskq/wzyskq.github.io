@@ -19,11 +19,13 @@ p {color: aliceblue;}
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
 }
 .head{
-    padding-top: 30%;
-    padding-left: 8%;
+    padding: 30% 0 10% 8%;
+    /* padding-top: 30%;
+    padding-left: 8%; */
     /* padding: 55vh 5vh 27vh 10vh; */
 }
 table td{
@@ -90,4 +92,10 @@ table th{
 table td a{
     color:aliceblue;
     cursor: url(../picture/smouse.cur), auto;
+}
+.borderr{
+    /* border-bottom: 3px solid aliceblue; */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 5px 12px;
 }
