@@ -4,10 +4,12 @@
 }
 body{
     user-select: none;
+    cursor: url(../picture/smouse.cur), auto;
 }
 a{
     text-decoration: none;
     color: aliceblue;
+    cursor: url(../picture/smouse.cur), auto;
 }
 h2{color: aliceblue;}
 p {color: aliceblue;}
@@ -87,4 +89,5 @@ table th{
 }
 table td a{
     color:aliceblue;
+    cursor: url(../picture/smouse.cur), auto;
 }
