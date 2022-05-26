@@ -34,3 +34,7 @@ table td a{
     border-radius: 10px;
     padding: 3px;
 }
+.borderr:hover{
+    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
+}
+
