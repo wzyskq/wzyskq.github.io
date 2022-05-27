@@ -15,7 +15,10 @@ a{
     color: aliceblue;
     cursor: url(../picture/smouse.cur), auto;
 }
-h2{color: aliceblue;}
+h2{
+    color: aliceblue;
+    font-size: 2em;
+}
 p {color: aliceblue;}
 .header{
     /* background-image: url(../picture/p1.png); */
@@ -61,7 +64,7 @@ p.fushuhang{
 }
 .sth{
     min-height: 70vh;
-    padding: 10vh;
+    margin: 0 10% 10%;
 }
 .history{
     height: 100%;
