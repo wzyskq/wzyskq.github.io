@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    cursor: url(../picture/smouse.cur), auto;
 }
 a {
     text-decoration: none;
@@ -14,11 +15,15 @@ body {
     
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     user-select: none;
-    cursor: url(../picture/smouse.cur), auto;
 }
-table caption{
+table caption a{
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 550;
+    color: white;
+}
+table caption a:hover{
+    color: wheat;
 }
 table td{
     padding:5px;
@@ -26,7 +31,6 @@ table td{
 }
 table td a{
     color: #000;
-    cursor: url(../picture/smouse.cur), auto;
 }
 .borderr{
     /* border-bottom: 3px solid aliceblue; */

@@ -13,7 +13,7 @@
 .part1{
     width: auto;
     height: 51.5%;
-    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca551454.png);
+    position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,4 +28,19 @@
     margin: 20px;
     padding: 7%;
     /* border: 1px solid ; */
+}
+.bg01{
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca551454.png);
+}
+.bg02{
+    background-image: url(https://pic.lienav.com/i/2022/05/29/629306ddf151d.png);
+}
+.bg02 p{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+.bg02 p a:hover{
+    color:wheat;
+    text-shadow: 0 0 10px black;
 }
