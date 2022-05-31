@@ -4,10 +4,15 @@
     background-color: rgba(240, 248, 255, 0.2);
     border-radius: 20px;
     margin: 15px;
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.2);
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
     /* overflow: hidden; */
 }
 .box:hover{
-    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
+    box-shadow: 0px 30px 30px rgba(128, 128, 128, 0.43);
+    transform: translateY(-5px);
+    transition-delay: 0s !important;
 }
 
 .part1{
@@ -33,14 +38,20 @@
     background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca551454.png);
 }
 .bg02{
-    background-image: url(https://pic.lienav.com/i/2022/05/29/629306ddf151d.png);
+    background-image: url(https://pic.lienav.com/i/2022/05/31/6295fb77bbbb5.png);
 }
-.bg02 p{
+p.hrefsth{
+    margin: auto;
     position: absolute;
     bottom: 0;
-    left: 20%;
+    left: 33%;
+    background-color: rgba(240, 248, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px;
 }
-.bg02 p a:hover{
-    color:wheat;
-    text-shadow: 0 0 10px black;
+p.hrefsth:hover{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
+    transform: translateX(-4px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

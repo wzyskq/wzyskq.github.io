@@ -16,8 +16,17 @@ body {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     user-select: none;
 }
+h2{
+    color: aliceblue;
+    text-align: left;
+}
+span{
+    font-size: 2em;
+}
+caption{
+    margin: 25px;
+}
 table caption a{
-    padding: 10px;
     font-size: 2em;
     font-weight: 550;
     color: white;
