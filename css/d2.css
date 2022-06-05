@@ -7,13 +7,14 @@ a {
     text-decoration: none;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
     
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-attachment: fixed;
     user-select: none;
 }
 h2{
@@ -24,7 +25,7 @@ span{
     font-size: 2em;
 }
 caption{
-    margin: 25px;
+    margin: 20px;
 }
 table caption a{
     font-size: 2em;
