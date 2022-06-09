@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     cursor: url(../picture/smouse.cur), auto;
-}
-body{
     user-select: none;
+}
+.body{
     background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png);
     background-attachment: fixed;
     background-repeat: no-repeat;

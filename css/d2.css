@@ -3,7 +3,7 @@
     margin: 0;
     cursor: url(../picture/smouse.cur), auto;
 }
-a {
+a,abbr{
     text-decoration: none;
 }
 body {
@@ -24,6 +24,9 @@ h2{
 span{
     font-size: 2em;
 }
+table{
+    margin: 30px;
+}
 caption{
     margin: 20px;
 }
@@ -39,16 +42,11 @@ table td{
     padding:5px;
     color: #000;
 }
-table td a{
-    color: #000;
-}
 .borderr{
-    /* border-bottom: 3px solid aliceblue; */
-    background-color: rgba(246, 246, 246, 0.375);
-    border-radius: 10px;
-    padding: 3px;
+    color: rgba(128, 128, 128, 0.5);
 }
 .borderr:hover{
-    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.1);
 }
 
