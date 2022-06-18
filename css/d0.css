@@ -2,8 +2,8 @@
     width: 5px;
     color: transparent;
 }
-::-webkit-scrollbar-thumb{  
-    background: grey;     
+::-webkit-scrollbar-thumb{
+    background: grey;
     border-radius: 5px;
     /* transition: 1s; */
 }

@@ -43,7 +43,9 @@ table td{
     color: #000;
 }
 .borderr{
+    padding: 2px;
     color: rgba(128, 128, 128, 0.5);
+    border-bottom: 1px rgba(128, 128, 128, 0.5) solid;
 }
 .borderr:hover{
     border-radius: 20px;

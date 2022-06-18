@@ -4,6 +4,17 @@
     cursor: url(../picture/smouse.cur), auto;
     user-select: none;
 }
+audio{
+    position: fixed;
+    z-index: 50;
+    right: -255px;
+    top: 50%;
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+audio:hover {
+    transform: translateX(-255px);
+}
 .body{
     background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png);
     background-attachment: fixed;

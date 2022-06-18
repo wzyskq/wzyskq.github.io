@@ -21,15 +21,18 @@ table td{
     border: 1px black solid;
 } */
 caption{
-    margin: 30px;
+    margin: 0 0 30px;
 }
-caption a{
+abbr{
+    text-decoration: none
+}
+a{
     text-decoration: none;
     color: white;
     font-size: 2em;
     font-weight: 600;
 }
-caption a:hover{
+a:hover{
     color: rgb(0, 136, 255);
 }
 .ma{
