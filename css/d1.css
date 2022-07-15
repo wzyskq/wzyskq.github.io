@@ -59,13 +59,32 @@ p.fushuhang{
 }
 
 .about{
-    height: 100%;
-    padding: 10vh 0 35vh;
+    padding: 100px 0 100px;
     line-height: 2em;
 }
+/* .abouttext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+.abouttext a{
+    color: rgba(128, 128, 128, 0.75);
+    border-bottom: 1px solid;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.abouttext a:hover{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.aboutme, .aboutthis{
+    margin: 20px;
+}
+
 .sth{
     min-height: 70vh;
-    margin: 0 10% 10%;
+    margin: 5% 10% 10%;
 }
 .history{
     height: 100%;
