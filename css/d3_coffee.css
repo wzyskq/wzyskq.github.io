@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height:100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(-30deg, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    user-select: none;
+}
+/* table{
+    border: 1px black solid;
+}
+table td{
+    border: 1px black solid;
+} */
+.ma{
+    height: 250px;
+    width: 250px;
+    background-image: url(https://pic.lienav.com/i/2022/05/26/628f19e63acd6.png);
+    background-size: 100% 100%;
+}
+.words{
+    width: 250px;
+    text-align: center;
+    line-height: 1.4em;
+    letter-spacing: 0.1em;
+    font-size: 1.1em;
+    color: rgb(136, 136, 136);
+
+}
