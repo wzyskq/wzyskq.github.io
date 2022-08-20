@@ -9,7 +9,7 @@
 	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 .box:hover{
-    box-shadow: 0px 30px 30px rgba(128, 128, 128, 0.43);
+    /* box-shadow: 0px 30px 30px rgba(128, 128, 128, 0.43); */
     transform: translateY(-5px);
     transition-delay: 0s !important;
 }
@@ -25,7 +25,7 @@
 }
 .part2{
     width: auto;
-    background-color: rgba(130, 130, 130, 0.173);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     margin: 20px;
     padding: 5%;
@@ -40,16 +40,16 @@ b p{
 }
 .bg01{
     background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca551454.png);
-}
-/* https://m1.im5i.com/2022/07/24/UCo6vD.png */
+}/* https://m1.im5i.com/2022/07/24/UCo6vD.png */
 .bg02{
-    background-image: url(https://pic.lienav.com/i/2022/05/31/6295fb77bbbb5.png);
+    background-image: url(https://pic.lienav.com/i/2022/08/20/6300c56ac911d.png);
 }
-/* https://m1.im5i.com/2022/07/24/UCoy2q.png */
 .bg03{
     background-image: url(https://pic.lienav.com/i/2022/06/03/62996a3796e9a.png);
+}/* https://m1.im5i.com/2022/07/24/UCol0Q.png */
+.bg04{
+    background-image: url(https://pic.lienav.com/i/2022/08/20/6300c56a0a3c4.png);
 }
-/* https://m1.im5i.com/2022/07/24/UCol0Q.png */
 p.hrefsth{
     margin: auto;
     position: absolute;
@@ -63,5 +63,6 @@ p.hrefsth:hover{
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.1em;
     transform: translateX(-4px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
 }
