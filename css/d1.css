@@ -4,9 +4,15 @@
     cursor: url(../picture/smouse.cur), auto;
     user-select: none;
 }
+:root{
+    --WholeShadow: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0))
+}
+
+
+/* 背景音乐 */
 audio{
     position: fixed;
-    z-index: 50;
+    z-index: 200;
     right: -255px;
     top: 90%;
     -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
@@ -16,8 +22,14 @@ audio{
 audio:hover {
     transform: translateX(-255px);
 }
+
+
+/* 大背景 */
 #body{
-    background-image: url(https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png);
+    background-image:
+    var(--WholeShadow),
+    url(https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png),
+    linear-gradient(200deg,#b1f4cf,#9890e3);
     /* https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png */
     /* https://m1.im5i.com/2022/07/24/UCoJAx.png */
     background-attachment: fixed;
@@ -34,6 +46,31 @@ h2{
     font-size: 2em;
 }
 p {color: aliceblue;}
+
+
+/* 夜间模式 */
+#NightMode{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+#NightMode i{
+    font-size: 26px;
+    color: black;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+}
+
+
+/* 头部 */
 .header{min-height: 100vh;}
 #head{
     padding: 10% 0 30% 30%;
@@ -50,19 +87,25 @@ p.fushuhang{
     color: aliceblue;
 }
 .zs{color: rgb(193, 193, 193);}
+
+
+/* 分部背景 */
 #bg{
     text-align: center;
-    /* background: linear-gradient(200deg,#b1f4cf,#9890e3); */
-    background-image: url(https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png);
+    background-image: 
+    var(--WholeShadow),
+    url(https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png),
+    linear-gradient(-200deg,#b1f4cf,#9890e3);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
 
+
+/* 关于 */
 .about{
     padding: 100px 0 100px;
     line-height: 2em;
 }
-
 .abouttext a{
     color: rgba(242, 255, 0, 0.75);
     border-bottom: 1px solid;
@@ -78,10 +121,15 @@ p.fushuhang{
     margin: 20px;
 }
 
+
+/* 作品 */
 .sth{
     min-height: 70vh;
     margin: 5% 10% 10%;
 }
+
+
+/* 历史 */
 .history{
     height: 100%;
     padding: 10vh;
@@ -97,6 +145,9 @@ p.xiangqing{
 p.xiangqing:hover{
     background-color: rgba(128, 128, 128, 0.5);
 }
+
+
+/* 尾部 */
 .ending{
     min-height: 30vh;
     display: flex;
@@ -118,6 +169,9 @@ table th{
     padding:5px;
     color:aliceblue;
 }
+
+
+/* 按钮 */
 .borderr{
     /* border-bottom: 3px solid aliceblue; */
     background-color: rgba(255, 255, 255, 0.15);
@@ -130,6 +184,8 @@ table th{
     box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
 }
 
+
+/* 杂项 */
 @keyframes audiogo {
     0% {
         transform: translateX(-255px);

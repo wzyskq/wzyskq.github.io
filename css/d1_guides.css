@@ -4,7 +4,7 @@
     position: fixed;
     /* background-color: rgb(62, 64, 65); */
     animation: gogo 3s ease;
-    z-index: 50;
+    z-index: 200;
 }
 
 .gboard{

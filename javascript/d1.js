@@ -1,3 +1,4 @@
+// 咖啡店
 function on() {
     document.getElementById("coffeeshop").style.cssText = "background-color: rgba(0, 0, 0, 0.3); z-index:100";
     document.getElementById("coffeecard").style.opacity = "1";
@@ -7,6 +8,8 @@ function off() {
     document.getElementById("coffeecard").style.opacity = "0";
 }
 
+
+//导航栏
 function getTop(elem) {
     var elemTop = elem.offsetTop;   //获得elem元素距相对定位的父元素的top
     elem = elem.offsetParent;   //将elem换成起相对定位的父元素
@@ -62,4 +65,31 @@ gicon5.onclick = function () {
         top: reloud(5),
         behavior: "smooth"
     });
+}
+
+
+//夜间模式
+function NightMode(){
+    let NMback = document.getElementById('NightMode');
+    let NMbacki = document.getElementById('NMbacki');
+    let NMbacki1 = document.getElementsByClassName('bi bi-brightness-high');
+    let NMbacki2 = document.getElementsByClassName('bi bi-brightness-high-fill');
+
+    var NMstate = document.querySelector(':root');
+    // console.log(NMstate)
+    var NMstates = getComputedStyle(NMstate).getPropertyValue('--WholeShadow');
+    // console.log(NMstates);
+    try {
+        let result = NMstates.match(/0, 0, 0, (0.5)/)[1];
+        // console.log(result[1]);
+        NMstate.style.setProperty('--WholeShadow', 'linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) ');
+        NMback.style.cssText = 'background-color: white;';
+        NMbacki.style.cssText = 'color: black;';
+        NMbacki2.className = 'bi bi-brightness-high';
+    } catch (eer) {
+        NMstate.style.setProperty('--WholeShadow', 'linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ');
+        NMback.style.cssText = 'background-color: gray;';
+        NMbacki.style.cssText = 'color: white;';
+        NMbacki1.className = 'bi bi-brightness-high-fill';
+    }        
 }
