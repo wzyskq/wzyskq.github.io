@@ -94,8 +94,8 @@ p.fushuhang{
     text-align: center;
     background-image: 
     var(--WholeShadow),
-    url(https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png),
-    linear-gradient(-200deg,#b1f4cf,#9890e3);
+    url(https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png);
+    /* linear-gradient(-200deg,#9890e3,#b1f4cf); */
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -132,7 +132,12 @@ p.fushuhang{
 /* 历史 */
 .history{
     height: 100%;
-    padding: 10vh;
+    padding: 0 0 15vh 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 p.xiangqing{
     padding-right: 0;
@@ -142,10 +147,9 @@ p.xiangqing{
     -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
 	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
-p.xiangqing:hover{
-    background-color: rgba(128, 128, 128, 0.5);
-}
-
+p.xiangqing a{color: black;}
+p.xiangqing:hover{background-color: rgba(128, 128, 128, 0.5);}
+p.xiangqing:hover a{color: aliceblue;}
 
 /* 尾部 */
 .ending{

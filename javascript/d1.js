@@ -56,7 +56,7 @@ gicon3.onclick = function () {
 }
 gicon4.onclick = function () {
     window.scrollTo({
-        top: reloud(4),
+        top: reloud(4)-60,
         behavior: "smooth"
     });
 }

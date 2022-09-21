@@ -1,3 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 允许换行 */
+    flex-wrap: wrap;
+}
 .box{
     width: 300px;
     /* height: 300px; */
