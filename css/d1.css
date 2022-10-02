@@ -24,11 +24,12 @@ audio:hover {
 }
 
 
-/* 大背景 */
+/* 底背景 */
 #body{
     background-image:
     var(--WholeShadow),
-    url(https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png),
+    url(https://cdn.jsdelivr.com/gh/wzyskq/picture/b2.png),
+    /* https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png */
     linear-gradient(200deg,#b1f4cf,#9890e3);
     /* https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png */
     /* https://m1.im5i.com/2022/07/24/UCoJAx.png */
@@ -94,8 +95,8 @@ p.fushuhang{
     text-align: center;
     background-image: 
     var(--WholeShadow),
-    url(https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png);
-    /* linear-gradient(-200deg,#9890e3,#b1f4cf); */
+    url(https://cdn.jsdelivr.com/gh/wzyskq/picture/b1.png);
+    /* https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png */
     background-size: 100% 100%;
     background-attachment: fixed;
 }

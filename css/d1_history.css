@@ -136,8 +136,8 @@ hr{
     .enve3ss{top: -20%;}
     #envelope:hover .enve3ss{background-color: rgb(155, 155, 155);top: -40%;}
 
-    #envelope{height: 400px;}
+    #envelope{height: 450px;}
     .enveback{height: 50%;}
-    #envelope:hover .envepaper{top: 10%;}
+    #envelope:hover .envepaper{top: 0%;}
     .envecover{top: 0%;}
 }

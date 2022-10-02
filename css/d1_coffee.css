@@ -49,7 +49,8 @@ caption{
 .coffeema{
     height: 250px;
     width: 250px;
-    background-image: url(https://pic.lienav.com/i/2022/05/26/628f19e63acd6.png);
+    background-image: url(../picture/payqr.png);
+    /* https://pic.lienav.com/i/2022/05/26/628f19e63acd6.png */
     background-size: cover;
     /* border: 1px black solid; */
 }
