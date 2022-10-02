@@ -28,7 +28,7 @@ audio:hover {
 #body{
     background-image:
     var(--WholeShadow),
-    url(https://cdn.jsdelivr.com/gh/wzyskq/picture/b2.png),
+    url(https://cdn.jsdelivr.net/gh/wzyskq/wzyskq.github.io/picture/b2.png),
     /* https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png */
     linear-gradient(200deg,#b1f4cf,#9890e3);
     /* https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png */
@@ -95,7 +95,7 @@ p.fushuhang{
     text-align: center;
     background-image: 
     var(--WholeShadow),
-    url(https://cdn.jsdelivr.com/gh/wzyskq/picture/b1.png);
+    url(https://cdn.jsdelivr.net/gh/wzyskq/wzyskq.github.io/picture/b1.png);
     /* https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png */
     background-size: 100% 100%;
     background-attachment: fixed;
