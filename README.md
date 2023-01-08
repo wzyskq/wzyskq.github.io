@@ -1,5 +1,11 @@
 # wzyskq.github.io
 
-下阶段更新：
+Welcome to my Homepage.
 
-> 冥想中...
+PS:
+
+Here will have great changes in the future...
+
+~~After a long time~~
+
+Because now I'm busy in high school (>_<).
