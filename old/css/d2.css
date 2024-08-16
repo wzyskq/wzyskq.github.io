@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: url(../picture/smouse.cur), auto;
+}
+a,abbr{text-decoration: none;}
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-attachment: fixed;
+    user-select: none;
+}
+h2{
+    color: aliceblue;
+    text-align: left;
+}
+span{font-size: 2em;}
+.beizhu{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+}
+table{margin: 30px;}
+caption{margin: 20px;}
+table caption a{
+    font-size: 2em;
+    font-weight: 550;
+    color: white;
+}
+table caption a:hover{
+    color: wheat;
+}
+table td{
+    padding:5px;
+    color: #000;
+}
+.borderr{
+    padding: 2px;
+    color: rgba(128, 128, 128, 0.5);
+    border-bottom: 1px rgba(128, 128, 128, 0.5) solid;
+    transition: .3s;
+}
+.borderr:hover{
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.1);
+    border: none;
+}
+tr{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:30px;
+}
+td:first-child{width: 30px;}
+td:nth-child(2){width: 250px;}
+td:nth-child(3){
+    margin-left: 42px;
+    color: rgba(0, 0, 0, 0.5);
+}

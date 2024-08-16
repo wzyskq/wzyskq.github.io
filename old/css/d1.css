@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor: url(../picture/smouse.cur), auto;
+    user-select: none;
+}
+:root{
+    --WholeShadow: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0))
+}
+
+
+/* 背景音乐 */
+audio{
+    position: fixed;
+    z-index: 200;
+    right: -255px;
+    top: 90%;
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    animation: audiogo 3s ease;
+}
+audio:hover {
+    transform: translateX(-255px);
+}
+
+
+/* 底背景 */
+#body{
+    background-image:
+    var(--WholeShadow),
+    url(../picture/b2.png),
+    /* https://pic.lienav.com/i/2022/08/13/62f7249434f6a.png */
+    linear-gradient(200deg,#b1f4cf,#9890e3);
+    /* https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png */
+    /* https://m1.im5i.com/2022/07/24/UCoJAx.png */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+h2{
+    color: aliceblue;
+    font-size: 2em;
+}
+p {color: aliceblue;}
+
+
+/* 夜间模式 */
+#NightMode{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+#NightMode i{
+    font-size: 26px;
+    color: black;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+}
+
+
+/* 头部 */
+.header{min-height: 100vh;}
+#head{
+    padding: 10% 0 30% 30%;
+    /* display: none; */
+}
+table td{padding: 10px;}
+h1.tit{
+    font-size: 3.5em; 
+    color: aliceblue; 
+}
+p.fushuhang{
+    text-align: center;
+    font-size: 1.15em;
+    color: aliceblue;
+}
+.zs{color: rgb(193, 193, 193);}
+
+
+/* 分部背景 */
+#bg{
+    text-align: center;
+    background-image: 
+    var(--WholeShadow),
+    url(../picture/b1.png);
+    /* https://pic.lienav.com/i/2022/08/13/62f70c5f8320f.png */
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+/* 关于 */
+.about{
+    padding: 100px 0 100px;
+    line-height: 2em;
+}
+.abouttext a{
+    color: rgba(242, 255, 0, 0.75);
+    border-bottom: 1px solid;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.abouttext a:hover{
+    border-radius: 20px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.aboutme, .aboutthis{
+    margin: 20px;
+}
+
+
+/* 作品 */
+.sth{
+    min-height: 70vh;
+    margin: 5% 10% 10%;
+}
+
+
+/* 历史 */
+.history{
+    height: 100%;
+    padding: 0 0 15vh 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p.xiangqing{
+    padding-right: 0;
+    margin: auto;
+    width: 170px;
+    text-align:left;
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+p.xiangqing a{color: black; transition: all 0.3s linear;}
+p.xiangqing:hover a{color: aliceblue;}
+
+/* 尾部 */
+.ending{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.endtable{
+    margin: 20px;
+}
+table caption{
+    padding: 10px;
+    font-size: 1.5em;
+}
+table td{
+    padding:5px;
+    color:aliceblue;
+}
+table th{
+    padding:5px;
+    color:aliceblue;
+}
+
+
+/* 按钮 */
+.borderr{
+    /* border-bottom: 3px solid aliceblue; */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 5px 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+.borderr:hover{
+    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
+}
+
+
+/* 杂项 */
+@keyframes audiogo {
+    0% {
+        transform: translateX(-255px);
+    } 30% {
+        transform: translateX(-255px);
+    } 100% {
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 500px){
+    #head{
+        padding: 20% 0 10% 8%;
+    }
+    /* #head tr td h1,#head tr td p{
+        color: rgb(199, 104, 196);
+    } */
+    #head tr td p span{
+        color: gray;
+    }
+    #body{
+        background-size: 200% 220%;
+    }
+    #bg{
+        background-size: 200% 220%;
+    }
+}
+
+@media screen and (max-height: 600px){
+    #body{
+        background-size: cover;
+    }
+    #bg{
+        background-size: cover;
+    }
+}

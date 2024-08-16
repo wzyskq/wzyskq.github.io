@@ -5,268 +5,203 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我只有三块钱</title>
+    <title>Project 118</title>
+    <link rel="icon" type="image/svg" href="https://wzyskq.github.io/img/svg/music.svg">
 
-    <link rel="stylesheet" type="text/css" href="css/d0.css">
-    <link rel="stylesheet" type="text/css" href="css/d1.css">
-    <link rel="stylesheet" type="text/css" href="css/d1_guides.css">
-    <link rel="stylesheet" type="text/css" href="css/d1_sth.css">
-    <link rel="stylesheet" type="text/css" href="css/d1_history.css">
-    <link rel="stylesheet" type="text/css" href="css/d1_coffee.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
-
-    <link rel="icon" type="image/svg" href="picture/p2_icon.svg">
+    <!-- <link rel="stylesheet" type="text/css" href="web/srcoll.css"> -->
+    <link rel="stylesheet" type="text/css" href="web/main.css">
 
 </head>
 
 <body>
-    <audio controls loop>
-        <source src="https://wzyskq.github.io/th1/music/1_渚.mp3" type="audio/mp3" />
-        <source src="https://wzyskq.github.io/th1/music/1_渚.ogg" type="audio/ogg" />
-        您的浏览器不支持此播放器!
-    </audio>
-    <div id="body">
-        <div class="guides">
-            <div class="gboard">
-                <div class="gicon" id="gicon1"><i class="bi bi-house-heart"></i>
-                    <p>首页 | 哇呼~</p>
-                </div>
-                <div class="gicon" id="gicon2"><i class="bi bi-file-person"></i>
-                    <p>简介 | 嘎哦~</p>
-                </div>
-                <div class="gicon" id="gicon3"><i class="bi bi-briefcase"></i>
-                    <p>应用 | 呜咕~</p>
-                </div>
-                <div class="gicon" id="gicon4"><i class="bi bi-clock-history"></i>
-                    <p>历史 | 哇库~</p>
-                </div>
-                <div class="gicon" id="gicon5"><i class="bi bi-three-dots"></i>
-                    <p>阿巴阿巴 ...</p>
-                </div>
+    <canvas class="canvas"></canvas>
+    <div class="container">
+        <div id="home">
+            <div id="title"></div>
+        </div>
+        <div id="navi">
+            <div class="ribbon">
+                <ul>
+                    <li onclick="window.location = '#home'">主页</li>
+                    <li onclick="window.location = '#profile'">关于</li>
+                    <li onclick="window.location ='#project'">作品</li>
+                    <div>|&nbsp;&nbsp;</div>
+
+                    <li>
+                        <input type="checkbox" id="lang" />
+                        <label for="lang" tabindex="0">
+                            <ion-icon name="language-outline"></ion-icon>
+                        </label>
+
+
+                    </li>
+
+                    <div></div> <!-- 用来扩大图标间距 -->
+
+                    <li>
+                        <input type="checkbox" id="darkMode" />
+                        <label for="darkMode" tabindex="0">
+                            <ion-icon name="sunny"></ion-icon>
+                            <ion-icon name="moon-outline"></ion-icon>
+                        </label>
+                    </li>
+
+                    <div></div> <!-- 用来扩大图标间距 -->
+
+                    <li>
+                        <input type="checkbox" id="snow" checked />
+                        <label for="snow" tabindex="0">
+                            <ion-icon name="snow-outline"></ion-icon>
+                        </label>
+                    </li>
+                </ul>
             </div>
-            <div class="gmark">
-                <i class="bi bi-geo-alt-fill"></i>
+
+            <div class="tooltip">
+                <span class="lang" tabindex="0"><a href="">简体中文</a></span>
+                <span class="lang" tabindex="0"><a href="">English</a></span>
             </div>
 
         </div>
-
-        <div id="NightMode" onclick="NightMode()">
-            <i class="bi bi-brightness-high" id="NMbacki"></i>
-        </div>
-
-        <div class="header">
-            <table id="head">
-                <tr>
-                    <td>
-                        <h1 class="tit animate__animated animate__zoomInDown animate__slow">人生忽如寄，莫辜负茶、汤、好天气.</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="fushuhang animate__animated animate__zoomInDown animate__delay-1s">
-                            <span class="zs">/*</span>这里是三厘米的个人主页<span class="zs">*/</span>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div id="bg">
-            <div class="about" id="ga2">
-                <h2 class="abouth2">关于</h2><br />
-                <div class="abouttext">
-                    <div class="aboutme">
-                        <p>我是三厘米<br />
-                            一名白日梦想家<br />
-                            拖延症、懒癌晚期<br />
-                            短暂颓废、周期迷茫、长期摆烂<br />
-                            有许许多多多多的小聪明<br />
-                            热衷钻研自动化:<br />
-                            hamibot、pyautogui<br />
-                            (其实就是因为我懒〒▽〒)<br />
-                            白日梦想:<br />
-                            带着相机和好心情环游世界<br />
-                            （￣︶￣）↗　<br />
-                            请多指教!
-                        </p>
+        <div id="profile">
+            <div class="information">
+                <section>
+                    <h1>是米米吖~</h1>
+                    <div class="picture">
+                        <div class="image"></div>
                     </div>
-                    <div class="aboutthis">
-                        <p>本小站是鄙人为学习前端而建<br>
-                            目前托管在<a href="https://github.com/wzyskq/wzyskq.github.io">GitHub</a>上<br>
-                            欢迎参考借鉴🎐
-                        </p>
+                    <div class="self">
+                        <p>👋 Hi ~</p>
+                        <p>✨ 这里是 <b>三狸米</b> 呐</p>
+                        <p>💤 一名白日梦想家</p>
+                        <p>💘 低浓度二次元纯爱战士</p>
+                        <p>😵 短暂颓废、周期迷茫、长期摆烂</p>
+                        <p>💦 有许多多多多的不成熟的想法</p>
+                        <p>⛄ 热衷钻研发呆</p>
+                        <p>🎫（￣︶￣）↗</p>
+                        <p>🎉 请多指教!</p>
+                    </div>
+                </section>
+
+                <section>
+                    <a href="mailto:zsydolzh141213@outlook.com" target="_blank" class="link">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <p>Email</p>
+                    </a>
+                    <a href="https://github.com/wzyskq" target="_blank" class="link">
+                        <ion-icon name="logo-github"></ion-icon>
+                        <p>Github</p>
+                    </a>
+                    <a class="link" id="pay" tabindex="0">
+                        <ion-icon name="cafe-outline"></ion-icon>
+                        <p>Coffee</p>
+                    </a>
+                </section>
+
+            </div>
+        </div>
+        <div id="project">
+            <h1>那年の作品</h1>
+            <div class="exhibition">
+
+                <a href="https://wzyskq.github.io/polybius_square_pro/" target="_blank" class="box">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <h2>波利比奥斯方阵PRO</h2>
+                        <p>一款高度自定义的加解密工具</p>
+                        <p>网页应用 安全类</p>
+                    </div>
+                </a>
+                <a href="https://wzyskq.github.io/project118/DiurnalTime/" target="_blank" class="box">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <h2>日出日落计算器<span class="beta">Beta</span></h2>
+                        <p>基于半昼弧公式的简易计算器</p>
+                        <p>网页应用 地理类</p>
+                    </div>
+                </a>
+                <a href="https://wzyskq.github.io/project118/SimulatedError/" target="_blank" class="box">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <h2>模拟报错软件</h2>
+                        <p>基于 python 的可自定义的模拟报错软件</p>
+                        <p>python 摸鱼类</p>
+                    </div>
+                </a>
+                <a href="https://wzyskq.github.io/project118/SimulatedUpdate/" target="_blank" class="box">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <h2>模拟升级<span class="beta">Beta</span></h2>
+                        <p>有点卡的不完全仿制 windows 升级页面</p>
+                        <p>网页应用 摸鱼类</p>
+                    </div>
+                </a>
+                <a href="https://wzyskq.github.io/project118/oldDemonstrations/" target="_blank" class="box">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <h2>早期组件</h2>
+                        <p>用来练习 css 而编写的一些组件</p>
+                        <p>网页展示</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div id="copyright">
+            © 2022 - 2024 三狸米
+        </div>
+        <div id="paypage">
+
+            <div class="paycard">
+                <h1>给我买咖啡💓</h1>
+                <li>如果你喜欢我的作品，欢迎捐助我呐~</li>
+                <li>不要超过早餐费嗷~</li>
+                <li>谢谢老板！！！</li>
+                <div class="qrcard">
+                    <div class="qr">
+                        <img src="web/bin/pay_wechat.png" alt="weChat">
+                    </div>
+                    <div class="qr">
+                        <img src="web/bin/pay_alipay.png" alt="aliPay">
                     </div>
                 </div>
-            </div>
 
-            <!-- <hr /> -->
-
-            <div class="sth" id="ga3">
-                <h2>作品工坊</h2>
-                <br>
-                <div class="container">
-                    <div class="box">
-                        <div class="part1 bg03">
-                            <a href="https://wzyskq.github.io/pw2/" target="_blank">
-                                <p class="hrefsth">🔗逛一逛🔮</p>
-                            </a>
-                        </div>
-                        <div class="part2">
-                            <b>
-                                <p>学习博客</p>
-                            </b>
-                            <p>用Gridea建立的附属博客</p>
-                            <p>（再不整理就完了💦）</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="part1 bg02">
-                            <a href="https://wzyskq.github.io/th1/" target="_blank">
-                                <p class="hrefsth">🔗点点我🎃</p>
-                            </a>
-                        </div>
-                        <div class="part2">
-                            <b>
-                                <p>模拟报错.exe</p>
-                            </b>
-                            <p>自制报错软件❌</p>
-                            <p>上网课要开视频？不存在的</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="part1 bg04">
-                            <a href="https://wzyskq.github.io/th2/chapter1/demo1/" target="_blank">
-                                <p class="hrefsth">🔗来摸鱼✨</p>
-                            </a>
-                        </div>
-                        <div class="part2">
-                            <b>
-                                <p>摸鱼</p>
-                            </b>
-                            <p>"老板，我的电脑在更新"</p>
-                            <p>（bushi）</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="part1 bg01"></div>
-                        <div class="part2">
-                            <b>
-                                <p>加急施工中...</p>
-                            </b>
-                            <p>这里什么也没有</p>
-                            <p>≡(▔﹏▔)≡</p>
-                        </div>
-                    </div>
-                    <!-- <div class="box"></div> -->
-                    <!-- <div class="box"></div> -->
-                    <!-- <div class="box"></div> -->
-                </div>
-            </div>
-
-            <!-- <hr /> -->
-
-            <div class="history" id="ga4">
-                <h2>历史笔记</h2>
-                <br />
-                <div class="history-container">
-                    <h4>重要更新</h4>
-                    
-                    <p class="his-text">2022/5/3 &nbsp; 成功在github上托管</p>
-                    <p class="his-text">2022/5/11 用Gridea建立博客</p>
-                    <p class="his-text">2022/7/25 创建学习案例存放✧</p>
-                    <br>
-
-                    <p class="xiangqing borderr">
-                        <a href="html/d2.html" target="_blank">详情点我（￣︶￣）↗</a>
-                    </p>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <div class="ending" id="ga5">
-            <div class="notice">
-                <table class="endtable">
-                    <tr>
-                        <th>联系方式</th>
-                        <td>
-                            <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=3361378431@qq.com"
-                                target="_blank">电子邮箱</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>灵感来源</th>
-                        <td>
-                            <a href="https://space.bilibili.com/14193369/" target="_blank">毛若昕</a>、
-                            <a href="https://space.bilibili.com/13604667/" target="_blank">艾恩小灰灰</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><a class="borderr" onclick="on()">☕ Buy me a coffee</a></td>
-                    </tr>
-                </table>
             </div>
         </div>
-
-        <div class="coffeeshop" id="coffeeshop" onclick="off()">
-            <div class="coffeecard" id="coffeecard">
-                <table>
-                    <caption>咖啡店</caption>
-                    <tr class="coffeetr">
-                        <td>
-                            <div class="coffeewords">咳咳<br>
-                                说一下<br>这个页面<b>纯属娱乐</b><br>
-                                不用当真o((>ω< ))o<br>
-                                    <br>
-                                    <span class="coffeespan">
-                                        小声:<br>
-                                        但是这个二维码是真的<br>
-                                        支持微信<br>
-                                        \^o^/
-                                    </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="coffeema"></div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-
     </div>
 
-    <script type="text/javascript" src="javascript/d0.js"></script>
-    <script type="text/javascript" src="javascript/d1.js"></script>
-    <script src="https://wzyskq.github.io/live2dw/lib/L2Dwidget.min.js"></script>
-    <script>
-        L2Dwidget.init({
-            model: {
-                jsonPath: "https://wzyskq.github.io/live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json",
-                scale: 1,
-            },
-            display: {
-                position: 'left',
-                width: 200,
-                height: 400,
-                hOffset: 50,
-                vOffset: -20,
-            },
-            mobile: {
-                show: false,
-                scale: 1,
-            },
-            dialog: {
-                enable: true,
-                hitokoto: true
-            }
-        })
-    </script>
+
+
 </body>
 
 </html>
+
+
+<!-- ionicons图标 -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script src="web/siteloader.js"></script>
+<script src="web/snow.js"></script>
+<script src="web/main.js"></script>
+
+
+<script>
+    window.onload = () => {
+        new Typewriter({
+            elementId: 'title',
+            text: ['“', '我一直注视着你，', '似近，似远，', '但你永远，', '看不见我......'],
+            duration: 250,
+        }).show();
+
+        // new Typewriter({
+        //     elementId: 'title',
+        //     // text: ['Hello', 'World!', 'This', 'is', 'a', 'test.'],
+        //     text: ['“','いつも見ていた，', '近いようで遠くて，', 'いつだって、', '届かない......'],
+        //     duration: 1,
+        // }).show();
+    };
+
+
+</script>
