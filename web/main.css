@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://zsftcdn.zeoseven.com/cn/62/main/result.css");
 * {
   margin: 0;
@@ -14,10 +15,14 @@
   --body-bg: rgba(0, 0, 0, 0.3);
   --body-animation-bg: rgba(0, 0, 0, 0.3);
   --snow-opacity: 0;
+  --loader-index: -100;
+  --loader-opacity: 0;
+  --loader-heart-opacity: 1;
+  --loader-welcome-opacity: 0;
   --svg-bg: url("bin/bg_day.svg");
   --container-bg: rgb(255, 255, 255);
-  --ribbon-to-bottom: -100%;
-  --tooltip-opacity: 0;
+  --ribbon-to-bottom: -64px;
+  --tooltip-display: flex;
   --profile-link-bg: rgba(245, 245, 245, 1);
   --project-bg: rgba(245, 245, 245, 1);
   --porject-box-shadow-1: #ddd;
@@ -45,7 +50,7 @@
   --snow-opacity: 1;
 }
 :root:has(#pay:focus-within) {
-  --paypage-index: 10;
+  --paypage-index: 100;
   --paypage-opacity: 1;
 }
 
@@ -83,6 +88,98 @@ body {
   transition: all 0.3s linear;
   animation: container-bg linear forwards;
   animation-timeline: scroll();
+}
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background: radial-gradient(circle at center, rgb(36, 36, 36), black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--loader-index);
+  opacity: var(--loader-opacity);
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+}
+#loader .heart {
+  width: 280px;
+  height: 220px;
+  opacity: var(--loader-heart-opacity);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  transition: inherit;
+}
+#loader .heart span {
+  --c: plum;
+  --h: 50%;
+  --t: 25%;
+  background-color: var(--c);
+  width: 20px;
+  border-radius: 10px;
+  position: relative;
+  height: var(--h);
+  top: var(--t);
+  animation: beating 1s infinite;
+}
+#loader .heart span:nth-child(1), #loader .heart span:nth-child(9) {
+  --c: lightcoral;
+  --h: 60px;
+  --t: 44px;
+}
+#loader .heart span:nth-child(2), #loader .heart span:nth-child(8) {
+  --c: lightskyblue;
+  --h: 120px;
+  --t: 12px;
+}
+#loader .heart span:nth-child(3), #loader .heart span:nth-child(7) {
+  --c: lightgreen;
+  --h: 160px;
+  --t: 0;
+}
+#loader .heart span:nth-child(4), #loader .heart span:nth-child(6) {
+  --c: gold;
+  --h: 180px;
+  --t: 16px;
+}
+#loader .heart span:nth-child(5) {
+  --c: plum;
+  --h: 188px;
+  --t: 32px;
+}
+#loader .welcome {
+  color: white;
+  font-size: 36px;
+  letter-spacing: 5px;
+  opacity: var(--loader-welcome-opacity);
+  position: absolute;
+  transition: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#loader .welcome span {
+  margin: 5px;
+}
+#loader .welcome span:nth-child(2) {
+  font-size: 30px;
+}
+#loader .welcome span:nth-child(3) {
+  font-size: 81px;
+}
+#loader .font {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  opacity: 0;
+  font-size: 48px;
+  font-family: "baotuxiaobaiti";
 }
 
 #home {
@@ -177,8 +274,7 @@ body {
   color: lightblue;
 }
 #navi .tooltip {
-  opacity: var(--tooltip-opacity);
-  display: flex;
+  display: var(--tooltip-display);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -254,7 +350,6 @@ body {
 #profile .information section .self p {
   color: var(--colorB);
   padding-left: 56px;
-  text-wrap: nowrap;
 }
 #profile .information section .self p:first-child {
   font-size: 36px;
@@ -326,31 +421,6 @@ body {
 #project .exhibition .box:hover {
   box-shadow: 12px 12px 25px var(--porject-box-shadow-1), -12px -12px 25px var(--porject-box-shadow-2);
 }
-#project .exhibition .box:nth-child(1) .pic {
-  background-image: url("bin/project_PolybiusSquarePro.pro.jpg");
-  background-size: 250%;
-  background-position: -83px -130px;
-}
-#project .exhibition .box:nth-child(2) .pic {
-  background-image: url("bin/project_DiurnalTime.pro.jpg");
-  background-size: 250%;
-  background-position: -75px -85px;
-}
-#project .exhibition .box:nth-child(3) .pic {
-  background-image: url("bin/project_SimulatedError.pro.jpg");
-  background-size: 105% 150%;
-  background-position: -1px -1px;
-}
-#project .exhibition .box:nth-child(4) .pic {
-  background-image: url("bin/project_simulatedUpdate.pro.jpg");
-  background-size: 250%;
-  background-position: -220px -150px;
-}
-#project .exhibition .box:nth-child(5) .pic {
-  background-image: url("bin/project_MidnightMatrix.pro.jpg");
-  background-size: cover;
-  background-position: 0 0;
-}
 #project .exhibition .box .pic {
   height: 160px;
   width: inherit;
@@ -359,6 +429,8 @@ body {
 }
 #project .exhibition .box .info {
   padding: 0 16px;
+  -webkit-mask-image: -webkit-linear-gradient(right, transparent 1%, white 20%);
+          mask-image: -webkit-linear-gradient(right, transparent 1%, white 20%);
 }
 #project .exhibition .box .info h2 {
   font-size: large;
@@ -376,6 +448,7 @@ body {
 }
 #project .exhibition .box .info p:nth-of-type(1) {
   font-size: 14px;
+  text-wrap: nowrap;
 }
 #project .exhibition .box .info p:nth-of-type(2) {
   color: gray;
@@ -385,8 +458,14 @@ body {
 
 #copyright {
   color: var(--colorB);
+  font-size: small;
+  line-height: 1.7em;
   text-align: center;
   padding: 10px;
+}
+#copyright span {
+  padding: 0 2px;
+  color: gray;
 }
 
 #paypage {
@@ -430,15 +509,18 @@ body {
   height: 275px;
   width: 250px;
   margin: 12px;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: -25px -11px;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
-#paypage .paycard .qrcard .qr img {
-  height: 300px;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, -12px);
+#paypage .paycard .qrcard .qr:nth-child(1) {
+  background-image: url("bin/pay_wechat.png");
+}
+#paypage .paycard .qrcard .qr:nth-child(2) {
+  background-image: url("bin/pay_alipay.png");
 }
 
 h1 {
@@ -485,6 +567,21 @@ ion-icon:hover {
   transition: all 0.3s linear;
 }
 
+@keyframes beating {
+  0%, 30% {
+    height: var(--h);
+    top: var(--t);
+    background-color: var(--c);
+    filter: blur(0);
+  }
+  60%, 70% {
+    height: 50%;
+    top: 25%;
+    background-color: plum;
+    /* 模糊度 */
+    filter: blur(5px);
+  }
+}
 @keyframes body-bg {
   0% {
     background-color: black;
@@ -517,6 +614,12 @@ ion-icon:hover {
   }
 }
 @media screen and ((max-width: 500px) or (max-height: 700px)) {
+  #loader .font {
+    font-size: 36px;
+  }
+  #home #title {
+    font-size: 36px;
+  }
   #home #title span:first-child {
     font-size: 76px;
     left: -56px;
@@ -532,13 +635,11 @@ ion-icon:hover {
 }
 @media screen and (max-width: 500px) {
   #home #title {
-    font-size: 36px;
     top: 50%;
   }
 }
 @media screen and (max-height: 700px) {
   #home #title {
-    font-size: 36px;
     top: 6%;
   }
 }/*# sourceMappingURL=main.css.map */

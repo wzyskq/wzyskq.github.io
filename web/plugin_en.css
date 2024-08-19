@@ -1,0 +1,12 @@
+.ribbon ul li {
+    padding: 5px 4px !important;
+}
+
+.self p {
+    padding-left: 0px !important;
+}
+
+.self p:first-child {
+    text-align: center;
+    left: -24px;
+}

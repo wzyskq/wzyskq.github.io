@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三狸米の小窝</title>
+    <link rel="icon" type="image/svg" href="https://wzyskq.github.io/img/svg/music.svg">
+
+    <!-- <link rel="stylesheet" type="text/css" href="web/srcoll.css"> -->
+    <link rel="stylesheet" type="text/css" href="../web/main.css">
+
+    <style></style>
+
+</head>
+
+<body>
+    <canvas class="canvas"></canvas>
+    <div class="container">
+        <div id="loader">
+            <div class="heart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="welcome">
+                <span>这里</span><span>是</span>
+                <span>三狸米</span><span>の</span><span>小窝</span>
+            </div>
+            <div class="font">你我注视看见似远近着但永一“，.</div>
+        </div>
+        <div id="home">
+            <div id="title"></div>
+        </div>
+        <div id="navi">
+            <div class="ribbon">
+                <ul>
+                    <li onclick="window.location = '#home'">主页</li>
+                    <li onclick="window.location = '#profile'">关于</li>
+                    <li onclick="window.location ='#project'">作品</li>
+                    <div>|&nbsp;&nbsp;</div>
+
+                    <li>
+                        <input type="checkbox" id="lang" />
+                        <label for="lang" tabindex="0">
+                            <ion-icon name="language-outline"></ion-icon>
+                        </label>
+
+
+                    </li>
+
+                    <div></div> <!-- 用来扩大图标间距 -->
+
+                    <li>
+                        <input type="checkbox" id="darkMode" />
+                        <label for="darkMode" tabindex="0">
+                            <ion-icon name="sunny"></ion-icon>
+                            <ion-icon name="moon-outline"></ion-icon>
+                        </label>
+                    </li>
+
+                    <div></div> <!-- 用来扩大图标间距 -->
+
+                    <li>
+                        <input type="checkbox" id="snow" checked />
+                        <label for="snow" tabindex="0">
+                            <ion-icon name="snow-outline"></ion-icon>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tooltip">
+                <span class="lang" onclick="reLang('zh')" tabindex="0"><a>简体中文</a></span>
+                <span class="lang" onclick="reLang('en')" tabindex="0"><a>English</a></span>
+                <span class="lang" onclick="reLang('default')" tabindex="0"><a>自动 / Auto</a></span>
+            </div>
+
+        </div>
+        <div id="profile">
+            <div class="information">
+                <section>
+                    <h1>是米米吖~</h1>
+                    <div class="picture">
+                        <div class="image"></div>
+                    </div>
+                    <div class="self">
+                        <p>👋 Hi ~</p>
+                        <p>✨ 这里是 <b>三狸米</b> 呐</p>
+                        <p>💤 一名白日梦想家</p>
+                        <p>💘 低浓度二次元纯爱战士</p>
+                        <p>😵 短暂颓废、周期迷茫、长期摆烂</p>
+                        <p>💦 有许多多多多的不成熟的想法</p>
+                        <p>⛄ 热衷钻研发呆</p>
+                        <p>🎫（￣︶￣）↗</p>
+                        <p>🎉 请多指教!</p>
+                    </div>
+                </section>
+
+                <section>
+                    <a href="mailto:zsydolzh141213@outlook.com" target="_blank" class="link">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <p>Email</p>
+                    </a>
+                    <a href="https://github.com/wzyskq" target="_blank" class="link">
+                        <ion-icon name="logo-github"></ion-icon>
+                        <p>Github</p>
+                    </a>
+                    <a class="link" id="pay" tabindex="0">
+                        <ion-icon name="cafe-outline"></ion-icon>
+                        <p>Coffee</p>
+                    </a>
+                </section>
+
+            </div>
+        </div>
+        <div id="project">
+            <h1>那年の作品</h1>
+            <div class="exhibition">
+
+                <!-- <a href="https://wzyskq.github.io/polybius_square_pro/" target="_blank" class="box">
+                    <div class="pic"></div>
+                      <div class="info">
+                        <h2>波利比奥斯方阵PRO</h2>
+                        <p>一款高度自定义的加解密工具</p>
+                        <p>网页应用 安全类</p>
+                    </div>
+                </a> -->
+
+            </div>
+        </div>
+        <div id="copyright">
+            <p>小窝在悄无声息中度过了<span id="time_day"></span>天<span id="time_hour"></span>时<span id="time_min"></span>分<span id="time_sec"></span>秒 ~</p>
+            <p>Have a nice day !</p>
+            <p>© 2022 - 2024 Sanlimi (三狸米)</p>
+        </div>
+        <div id="paypage">
+            <div class="paycard">
+                <h1>给我买咖啡💓</h1>
+                <li>如果你喜欢我的作品，欢迎捐助~</li>
+                <li>米米不要超过早餐嗷~</li>
+                <li>谢谢老板！！！</li>
+                <div class="qrcard">
+                    <div class="qr"></div>
+                    <div class="qr"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- ionicons图标 -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<!-- <script src="web/siteloader.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="../web/snow.js"></script>
+<script src="../web/main.js"></script>
+<script src="../web/mouse.js"></script>

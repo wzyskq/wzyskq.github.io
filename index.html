@@ -5,26 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 118</title>
+    <title>Sanlimi's Home</title>
     <link rel="icon" type="image/svg" href="https://wzyskq.github.io/img/svg/music.svg">
 
     <!-- <link rel="stylesheet" type="text/css" href="web/srcoll.css"> -->
     <link rel="stylesheet" type="text/css" href="web/main.css">
+    <link rel="stylesheet" type="text/css" href="web/plugin_en.css">
+
+    <style></style>
 
 </head>
 
 <body>
     <canvas class="canvas"></canvas>
     <div class="container">
+        <div id="loader">
+            <div class="heart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="welcome">
+                <span>Here</span><span>is</span>
+                <span>Sanlimi</span><span>の</span><span>Home</span>
+            </div>
+            <!-- <div class="font">你我注视看见似远近着但永一“，.</div> -->
+        </div>
         <div id="home">
             <div id="title"></div>
         </div>
         <div id="navi">
             <div class="ribbon">
                 <ul>
-                    <li onclick="window.location = '#home'">主页</li>
-                    <li onclick="window.location = '#profile'">关于</li>
-                    <li onclick="window.location ='#project'">作品</li>
+                    <li onclick="window.location = '#home'">Home</li>
+                    <li onclick="window.location = '#profile'">About</li>
+                    <li onclick="window.location ='#project'">Project</li>
                     <div>|&nbsp;&nbsp;</div>
 
                     <li>
@@ -58,28 +79,29 @@
             </div>
 
             <div class="tooltip">
-                <span class="lang" tabindex="0"><a href="">简体中文</a></span>
-                <span class="lang" tabindex="0"><a href="">English</a></span>
+                <span class="lang" onclick="reLang('en')" tabindex="0"><a>English</a></span>
+                <span class="lang" onclick="reLang('zh')" tabindex="0"><a>简体中文</a></span>
+                <span class="lang" onclick="reLang('default')" tabindex="0"><a>Auto / 自动</a></span>
             </div>
 
         </div>
         <div id="profile">
             <div class="information">
                 <section>
-                    <h1>是米米吖~</h1>
+                    <h1>About Me ~</h1>
                     <div class="picture">
                         <div class="image"></div>
                     </div>
                     <div class="self">
                         <p>👋 Hi ~</p>
-                        <p>✨ 这里是 <b>三狸米</b> 呐</p>
-                        <p>💤 一名白日梦想家</p>
-                        <p>💘 低浓度二次元纯爱战士</p>
-                        <p>😵 短暂颓废、周期迷茫、长期摆烂</p>
-                        <p>💦 有许多多多多的不成熟的想法</p>
-                        <p>⛄ 热衷钻研发呆</p>
+                        <p>✨ Here <b>Sanlimi</b> (三狸米)</p>
+                        <p>💤 A daydreamer</p>
+                        <p>💘 A low-concentration ACG enthusiast</p>
+                        <p>😵 Brief decadence, periodic confusion, long-term slacking off</p>
+                        <p>💦 Having many, many, many immature ideas ~ (maybe)</p>
+                        <p>⛄ Passionate about studying and daydreaming</p>
+                        <p>🎉 Your suggestions are highly appreciated !</p>
                         <p>🎫（￣︶￣）↗</p>
-                        <p>🎉 请多指教!</p>
                     </div>
                 </section>
 
@@ -101,76 +123,37 @@
             </div>
         </div>
         <div id="project">
-            <h1>那年の作品</h1>
+            <h1>Projects of Those Years</h1>
             <div class="exhibition">
-
-                <a href="https://wzyskq.github.io/polybius_square_pro/" target="_blank" class="box">
+                <!-- <a href="" target="_blank" class="box">
                     <div class="pic"></div>
-                    <div class="info">
-                        <h2>波利比奥斯方阵PRO</h2>
-                        <p>一款高度自定义的加解密工具</p>
-                        <p>网页应用 安全类</p>
+                      <div class="info">
+                        <h2></h2>
+                        <p></p>
+                        <p></p>
                     </div>
-                </a>
-                <a href="https://wzyskq.github.io/project118/DiurnalTime/" target="_blank" class="box">
-                    <div class="pic"></div>
-                    <div class="info">
-                        <h2>日出日落计算器<span class="beta">Beta</span></h2>
-                        <p>基于半昼弧公式的简易计算器</p>
-                        <p>网页应用 地理类</p>
-                    </div>
-                </a>
-                <a href="https://wzyskq.github.io/project118/SimulatedError/" target="_blank" class="box">
-                    <div class="pic"></div>
-                    <div class="info">
-                        <h2>模拟报错软件</h2>
-                        <p>基于 python 的可自定义的模拟报错软件</p>
-                        <p>python 摸鱼类</p>
-                    </div>
-                </a>
-                <a href="https://wzyskq.github.io/project118/SimulatedUpdate/" target="_blank" class="box">
-                    <div class="pic"></div>
-                    <div class="info">
-                        <h2>模拟升级<span class="beta">Beta</span></h2>
-                        <p>有点卡的不完全仿制 windows 升级页面</p>
-                        <p>网页应用 摸鱼类</p>
-                    </div>
-                </a>
-                <a href="https://wzyskq.github.io/project118/oldDemonstrations/" target="_blank" class="box">
-                    <div class="pic"></div>
-                    <div class="info">
-                        <h2>早期组件</h2>
-                        <p>用来练习 css 而编写的一些组件</p>
-                        <p>网页展示</p>
-                    </div>
-                </a>
-
+                </a> -->
             </div>
         </div>
         <div id="copyright">
-            © 2022 - 2024 三狸米
+            <p>The little home quietly passed<span id="time_day"></span>days<span id="time_hour"></span>hours<span id="time_min"></span>minutes<span id="time_sec"></span>seconds ~</p>
+            <p>Have a nice day ~</p>
+            <p>© 2022 - 2024 Sanlimi (三狸米)</p>
         </div>
         <div id="paypage">
-
             <div class="paycard">
-                <h1>给我买咖啡💓</h1>
-                <li>如果你喜欢我的作品，欢迎捐助我呐~</li>
-                <li>不要超过早餐费嗷~</li>
-                <li>谢谢老板！！！</li>
+                <h1>Buy me a cup of coffee 💓</h1>
+                <li>If you like my work, donations are welcome ~</li>
+                <li>Expenses should not exceed the cost of breakfast ~</li>
+                <li>You're welcome !!!</li>
                 <div class="qrcard">
-                    <div class="qr">
-                        <img src="web/bin/pay_wechat.png" alt="weChat">
-                    </div>
-                    <div class="qr">
-                        <img src="web/bin/pay_alipay.png" alt="aliPay">
-                    </div>
+                    <div class="qr"></div>
+                    <div class="qr"></div>
                 </div>
-
             </div>
         </div>
+
     </div>
-
-
 
 </body>
 
@@ -182,26 +165,9 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
-<script src="web/siteloader.js"></script>
+<!-- <script src="web/siteloader.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 <script src="web/snow.js"></script>
 <script src="web/main.js"></script>
-
-
-<script>
-    window.onload = () => {
-        new Typewriter({
-            elementId: 'title',
-            text: ['“', '我一直注视着你，', '似近，似远，', '但你永远，', '看不见我......'],
-            duration: 250,
-        }).show();
-
-        // new Typewriter({
-        //     elementId: 'title',
-        //     // text: ['Hello', 'World!', 'This', 'is', 'a', 'test.'],
-        //     text: ['“','いつも見ていた，', '近いようで遠くて，', 'いつだって、', '届かない......'],
-        //     duration: 1,
-        // }).show();
-    };
-
-
-</script>
+<script src="web/mouse.js"></script>

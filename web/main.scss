@@ -15,11 +15,17 @@
     --body-animation-bg: rgba(0, 0, 0, 0.3);
     --snow-opacity: 0;
 
+    --loader-index: -100;
+    --loader-opacity: 0;
+    --loader-heart-opacity: 1;
+    --loader-welcome-opacity: 0;
+
     --svg-bg: url('bin/bg_day.svg');
     --container-bg: rgb(255, 255, 255);
 
-    --ribbon-to-bottom: -100%; // js 控制
-    --tooltip-opacity: 0;
+    --ribbon-to-bottom: -64px; // js 控制
+    // --tooltip-opacity: 0;  // 调整 z-index 仍会误触
+    --tooltip-display: flex;
 
     --profile-link-bg: rgba(245, 245, 245, 1);
 
@@ -61,7 +67,7 @@
 
     &:has(#pay:focus-within)
     {
-        --paypage-index: 10;
+        --paypage-index: 100;
         --paypage-opacity: 1;
     }
 
@@ -72,7 +78,9 @@
 {
     width: 4px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb
+{
     background-color: var(--colorB);
     border-radius: 5px;
 }
@@ -118,6 +126,140 @@ body
 
     animation: container-bg linear forwards;
     animation-timeline: scroll();
+}
+
+
+
+#loader
+{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background: radial-gradient(circle at center, rgb(36, 36, 36), black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: var(--loader-index);
+    opacity: var(--loader-opacity);
+    transition: all .5s ease-in-out;
+    position: fixed;
+    top: 0;
+
+    .heart
+    {
+        width: 280px;
+        height: 220px;
+        opacity: var(--loader-heart-opacity);
+
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        transition: inherit;
+
+        span
+        {
+            --c: plum;
+            --h: 50%;
+            --t: 25%;
+
+            background-color: var(--c);
+            width: 20px;
+            border-radius: 10px;
+
+            position: relative;
+            height: var(--h);
+            top: var(--t);
+
+            animation: beating 1s infinite;
+
+            &:nth-child(1),
+            &:nth-child(9)
+            {
+                --c: lightcoral;
+                --h: 60px;
+                --t: 44px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(8)
+            {
+                --c: lightskyblue;
+                --h: 120px;
+                --t: 12px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(7)
+            {
+                --c: lightgreen;
+                --h: 160px;
+                --t: 0;
+            }
+
+            &:nth-child(4),
+            &:nth-child(6)
+            {
+                --c: gold;
+                --h: 180px;
+                --t: 16px;
+            }
+
+            &:nth-child(5)
+            {
+                --c: plum;
+                --h: 188px;
+                --t: 32px;
+            }
+
+        }
+
+    }
+
+    .welcome
+    {
+        color: white;
+        font-size: 36px;
+        letter-spacing: 5px;
+        opacity: var(--loader-welcome-opacity);
+        position: absolute;
+        transition: inherit;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        span
+        {
+            margin: 5px;
+
+            &:nth-child(2)
+            {
+                font-size: 30px;
+            }
+
+            &:nth-child(3)
+            {
+                font-size: 81px;
+            }
+        }
+
+    }
+
+    .font
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        opacity: 0;
+        font-size: 48px;
+        font-family: 'baotuxiaobaiti';
+    }
+
 }
 
 
@@ -291,10 +433,10 @@ body
 
     .tooltip
     {
-        // z-index: -2222;
-        opacity: var(--tooltip-opacity);
-        display: flex;
-        // display: var(--tooltip-display);
+        // z-index: -1000;
+        // opacity: var(--tooltip-opacity);
+        // display: flex;
+        display: var(--tooltip-display);
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -306,8 +448,9 @@ body
         border: 1px solid rgba(255, 255, 255, 0.64);
 
         position: absolute;
-        top: var(--ribbon-to-bottom); // -100%
-        // top: 236%;
+        // bottom: var(--ribbon-to-bottom);
+        top: var(--ribbon-to-bottom); // -64px
+        // top: 138px;
         left: 50%;
         transform: translate(-10%, -60%);
         transition: all .3s linear;
@@ -412,14 +555,14 @@ body
                 {
                     color: var(--colorB);
                     padding-left: 56px;
-                    text-wrap: nowrap;
+                    // text-wrap: nowrap;
 
                     &:first-child
                     {
                         font-size: 36px;
-                        // padding-left: 36px;
                         // text-align: center;
                         position: relative;
+                        // left: -24px;
                     }
                 }
 
@@ -540,42 +683,40 @@ body
                     -12px -12px 25px var(--porject-box-shadow-2);
             }
 
+            // &:nth-child(1) .pic
+            // {
+            //     background-image: url('bin/project_PolybiusSquarePro.pro.jpg');
+            //     background-size: cover;
+            //     background-position: 0;
+            // }
 
-            &:nth-child(1) .pic
-            {
-                background-image: url('bin/project_PolybiusSquarePro.pro.jpg');
-                background-size: 250%;
-                background-position: -83px -130px;
-            }
+            // &:nth-child(2) .pic
+            // {
+            //     background-image: url('bin/project_DiurnalTime.pro.jpg');
+            //     background-size: 250%;
+            //     background-position: -75px -85px;
+            // }
 
-            &:nth-child(2) .pic
-            {
-                background-image: url('bin/project_DiurnalTime.pro.jpg');
-                background-size: 250%;
-                background-position: -75px -85px;
-            }
+            // &:nth-child(3) .pic
+            // {
+            //     background-image: url('bin/project_SimulatedError.pro.jpg');
+            //     background-size: 105% 150%;
+            //     background-position: -1px -1px;
+            // }
 
-            &:nth-child(3) .pic
-            {
-                background-image: url('bin/project_SimulatedError.pro.jpg');
-                background-size: 105% 150%;
-                background-position: -1px -1px;
-            }
+            // &:nth-child(4) .pic
+            // {
+            //     background-image: url('bin/project_simulatedUpdate.pro.jpg');
+            //     background-size: 250%;
+            //     background-position: -220px -150px;
+            // }
 
-            &:nth-child(4) .pic
-            {
-                background-image: url('bin/project_simulatedUpdate.pro.jpg');
-                background-size: 250%;
-                background-position: -220px -150px;
-            }
-
-            &:nth-child(5) .pic
-            {
-                background-image: url('bin/project_MidnightMatrix.pro.jpg');
-                background-size: cover;
-                background-position: 0 0;
-            }
-
+            // &:nth-child(5) .pic
+            // {
+            //     background-image: url('bin/project_MidnightMatrix.pro.jpg');
+            //     background-size: cover;
+            //     background-position: 0 0;
+            // }
 
             .pic
             {
@@ -588,6 +729,7 @@ body
             .info
             {
                 padding: 0 16px;
+                mask-image: -webkit-linear-gradient(right, transparent 1%, white 20%);
 
                 h2
                 {
@@ -610,6 +752,7 @@ body
                 p:nth-of-type(1)
                 {
                     font-size: 14px;
+                    text-wrap: nowrap;
                 }
 
                 p:nth-of-type(2)
@@ -628,10 +771,17 @@ body
 
 #copyright
 {
-    // height: 50px;
     color: var(--colorB);
+    font-size: small;
+    line-height: 1.7em;
     text-align: center;
     padding: 10px;
+
+    span
+    {
+        padding: 0 2px;
+        color: gray;
+    }
 }
 
 
@@ -658,7 +808,7 @@ body
         padding: 10px 30px 20px;
         border: 1px solid black;
         border-radius: 24px;
-        background-color: var(--porject-box-shadow-1);  // 借用颜色
+        background-color: var(--porject-box-shadow-1); // 借用颜色
 
         h1
         {
@@ -687,18 +837,22 @@ body
             {
                 height: 275px;
                 width: 250px;
-                // padding: 10px;
                 margin: 12px;
+                background-size: 120%;
+                background-repeat: no-repeat;
+                background-position: -25px -11px;
                 position: relative;
                 border-radius: 20px;
                 overflow: hidden;
 
-                img
+                &:nth-child(1)
                 {
-                    height: 300px;
-                    position: relative;
-                    left: 50%;
-                    transform: translate(-50%, -12px);
+                    background-image: url('bin/pay_wechat.png');
+                }
+
+                &:nth-child(2)
+                {
+                    background-image: url('bin/pay_alipay.png');
                 }
             }
         }
@@ -779,7 +933,28 @@ ion-icon
 
 
 
+@keyframes beating
+{
 
+    0%,
+    30%
+    {
+        height: var(--h);
+        top: var(--t);
+        background-color: var(--c);
+        filter: blur(0);
+    }
+
+    60%,
+    70%
+    {
+        height: 50%;
+        top: 25%;
+        background-color: plum;
+        /* 模糊度 */
+        filter: blur(5px);
+    }
+}
 
 @keyframes body-bg
 {
@@ -847,11 +1022,20 @@ ion-icon
 
 @media screen and ((max-width: 500px) or (max-height: 700px))
 {
+    #loader
+    {
+        .font
+        {
+            font-size: 36px;
+        }
+    }
 
     #home
     {
         #title
         {
+            font-size: 36px;
+
             span:first-child
             {
                 font-size: 76px;
@@ -880,8 +1064,6 @@ ion-icon
     {
         #title
         {
-            // color: rgb(255, 0, 0);
-            font-size: 36px;
             top: 50%;
         }
     }
@@ -894,8 +1076,6 @@ ion-icon
     {
         #title
         {
-            // color: rgb(255, 0, 0);
-            font-size: 36px;
             top: 6%;
         }
     }

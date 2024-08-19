@@ -1,4 +1,3 @@
-// 雪花效果来自 https://gitee.com/wyanhui02/html_css_demo/tree/master/code/234
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
 
